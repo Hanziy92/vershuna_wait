@@ -22,30 +22,27 @@ const interval = setInterval(() => {
 }, 1000);
 
 document.getElementById("subscribe-form").addEventListener("submit", async function(e) {
- e.preventDefault();
+  e.preventDefault();
 
- const form = e.target;
+  const form = e.target;
 
- const formData = new FormData();
- formData.append("email", form.email.value);
- formData.append("phone", form.phone.value);
- formData.append("wish", form.wish.value);
+  const formData = new FormData();
+  formData.append("email", form.email.value);
+  formData.append("phone", form.phone.value);
+  formData.append("wish", form.wish.value);
 
- try {
-   const response = await fetch("https://script.google.com/macros/s/AKfycbxbbNwu4AEBU6cpjDyIcjflmRFmciedv0D_IAcIkoXLzYWpp4CANuBTSmiWpxd1XEylEQ/exec", {
-     method: "POST",
-     mode: "no-cors",
-     body: formData,
-   });
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycbxbbNwu4AEBU6cpjDyIcjflmRFmciedv0D_IAcIkoXLzYWpp4CANuBTSmiWpxd1XEylEQ/exec", {
+      method: "POST",
+      mode: "no-cors",
+      body: formData,
+    });
 
-   if (response.ok) {
-     document.getElementById("response-message").textContent = "✅ Дякуємо! Ви будете серед перших!";
-     form.reset();
-   } else {
-     document.getElementById("response-message").textContent = "⚠️ Сталася помилка. Спробуйте ще раз.";
-   }
- } catch (error) {
-   document.getElementById("response-message").textContent = "⚠️ Помилка з'єднання. Спробуйте пізніше.";
-   console.error("Fetch error:", error);
- }
+    document.getElementById("response-message").textContent = "✅ Дякуємо! Ви будете серед перших!";
+    form.reset();
+
+  } catch (error) {
+    document.getElementById("response-message").textContent = "⚠️ Помилка з'єднання. Спробуйте пізніше.";
+    console.error("Fetch error:", error);
+  }
 });
