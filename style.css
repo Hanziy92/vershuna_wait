@@ -1,0 +1,66 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #FAF8F3;
+  color: #1E3A4C;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 16px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.header p {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.tally-form {
+  margin-bottom: 40px;
+}
+
+.features, .unique {
+  margin-bottom: 40px;
+}
+
+.features h2, .unique h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.features ul, .unique ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.quote {
+  font-style: italic;
+  color: #4A4A4A;
+  margin-bottom: 40px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
