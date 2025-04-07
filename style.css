@@ -33,9 +33,60 @@ body {
   margin-bottom: 24px;
 }
 
-.tally-form {
-  margin-bottom: 40px;
+.countdown {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 24px 0;
+  color: #1E3A4C;
+  text-align: center;
 }
+
+.form-section {
+  background: #FAF8F3;
+  padding: 40px 20px;
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-section h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.form-section p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #1E3A4C;
+}
+
+#subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#subscribe-form input,
+#subscribe-form button {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#subscribe-form button {
+  background-color: #7B9081;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#subscribe-form button:hover {
+  background-color: #657566;
+}
+
 
 .features, .unique {
   margin-bottom: 40px;

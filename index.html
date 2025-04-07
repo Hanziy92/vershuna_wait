@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Вершина — Твій шлях до вигідного завтра</title>
+  <base href="/vershuna_wait/">
   <link rel="stylesheet" href="style.css" />
   <script src="https://tally.so/widgets/embed.js" defer></script>
 </head>
@@ -12,20 +13,37 @@
     <header class="header">
       <img src="logo/423423.png" alt="Логотип Вершина" class="logo"/>
       <h1>Знижки поруч. Отримуй те, що шукав.</h1>
-      <p>Додай товари в список бажаного — ми знайдемо знижки</p>
-    </header>
-
-    <section class="tally-form">
-
+      <p>Ми запускаємо сервіс, який сам знаходить для тебе вигідні пропозиції.
+        Хочеш отримати сповіщення про старт — залиш свої контакти.
+        Підприємці вже готують знижки, і ми повідомимо, коли все буде готово.</p>
+    </header>  
+    <!-- <section class="tally-form">
       <div style="border: 1px solid #ccc; border-radius: 12px; padding: 24px; background: #FAF8F3;">
         <iframe data-tally-src="https://tally.so/embed/mZerZV?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
         loading="lazy" width="100%" height="282" frameborder="0" marginheight="0" marginwidth="0"
         title="Підписка на оновлення 'Вершина'"></iframe>
-      </div>
-      
-      
+      </div> 
+    </section>  -->
+    <section class="form-section">
+      <h2>Хочеш знижки? Отримай сповіщення про запуск!</h2>
+      <p>Залиш email або номер телефону — і ми повідомимо тебе першими.</p>
+    
+      <form id="subscribe-form">
+        <input type="email" name="email" placeholder="Ваша електронна пошта" required />
+        <input type="text" name="phone" placeholder="Ваш номер телефону (необов’язково)" />
+        <input type="text" name="wish" placeholder="Що вас цікавить?" />
+        <button type="submit">Надіслати</button>
+      </form>
+    
+      <p id="response-message" style="margin-top: 12px; font-weight: bold;"></p>
     </section>
 
+    <section>
+      <div id="countdown" class="countdown">
+        До запуску залишилось: ...
+      </div>
+      
+    </section>
     <section class="features">
       <h2>Шукай. Бажай. Отримуй — без зайвого шуму.</h2>
       <ul>
@@ -54,6 +72,6 @@
       <p>Скopo ➝ App Store та Google Play</p>
       <p>Ви підприємець? <a href="#">Дізнайтесь, як залучити клієнтів →</a></p>
     </footer>
+    <script src="script.js"></script>
   </div>
-</body>
 </html>
