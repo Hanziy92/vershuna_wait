@@ -32,7 +32,7 @@ document.getElementById("subscribe-form").addEventListener("submit", async funct
  formData.append("wish", form.wish.value);
 
  try {
-   const response = await fetch("https://script.google.com/macros/s/AKfycbyqnhEUjJYpYmdpX2u0arqM1ljogRaPg9-9aSjL9a1RxJxzasqxU2XldVRmALdlTSesdg/exec", {
+   const response = await fetch("https://script.google.com/macros/s/AKfycbxbbNwu4AEBU6cpjDyIcjflmRFmciedv0D_IAcIkoXLzYWpp4CANuBTSmiWpxd1XEylEQ/exec", {
      method: "POST",
      body: formData,
    });
