@@ -34,6 +34,7 @@ document.getElementById("subscribe-form").addEventListener("submit", async funct
  try {
    const response = await fetch("https://script.google.com/macros/s/AKfycbxbbNwu4AEBU6cpjDyIcjflmRFmciedv0D_IAcIkoXLzYWpp4CANuBTSmiWpxd1XEylEQ/exec", {
      method: "POST",
+     mode: "no-cors",
      body: formData,
    });
 
