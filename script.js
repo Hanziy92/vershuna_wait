@@ -24,21 +24,28 @@
   document.getElementById("subscribe-form").addEventListener("submit", async function(e) {
    e.preventDefault();
  
-   const formData = new FormData();
-formData.append("email", data.email);
-formData.append("phone", data.phone);
-formData.append("wish", data.wish);
-
-const response = await fetch("https://script.google.com/macros/s/AKfycbyPP0a_8_ly_D1nBKa7cWCWi2wG8e51KOQ7ZFWd-feqaxEvcBr6mqsrwgZE6HPJK758/exec", {
-  method: "POST",
-  body: formData
-});
+   const form = e.target;
  
-   if (response.ok) {
-     document.getElementById("response-message").textContent = "✅ Дякуємо! Ви будете серед перших!";
-     form.reset();
-   } else {
-     document.getElementById("response-message").textContent = "⚠️ Сталася помилка. Спробуйте ще раз.";
+   const formData = new FormData();
+   formData.append("email", form.email.value);
+   formData.append("phone", form.phone.value);
+   formData.append("wish", form.wish.value);
+ 
+   try {
+     const response = await fetch("https://script.google.com/macros/s/AKfycbyqnhEUjJYpYmdpX2u0arqM1ljogRaPg9-9aSjL9a1RxJxzasqxU2XldVRmALdlTSesdg/exec", {
+       method: "POST",
+       body: formData,
+     });
+ 
+     if (response.ok) {
+       document.getElementById("response-message").textContent = "✅ Дякуємо! Ви будете серед перших!";
+       form.reset();
+     } else {
+       document.getElementById("response-message").textContent = "⚠️ Сталася помилка. Спробуйте ще раз.";
+     }
+   } catch (error) {
+     document.getElementById("response-message").textContent = "⚠️ Помилка з'єднання. Спробуйте пізніше.";
+     console.error("Fetch error:", error);
    }
  });
-
+ 
