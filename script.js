@@ -31,7 +31,7 @@
      wish: form.wish.value
    };
  
-   const response = await fetch("https://script.google.com/macros/s/AKfycbyPP0a_8_ly_D1nBKa7cWCWi2wG8e51KOQ7ZFWd-feqaxEvcBr6mqsrwgZE6HPJK758/exec", {
+   const response = await fetch("https://script.google.com/macros/s/AKfycbyqnhEUjJYpYmdpX2u0arqM1ljogRaPg9-9aSjL9a1RxJxzasqxU2XldVRmALdlTSesdg/exec", {
      method: "POST",
      headers: {
        "Content-Type": "application/json"
