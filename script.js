@@ -32,7 +32,7 @@ document.getElementById("subscribe-form").addEventListener("submit", async funct
   formData.append("wish", form.wish.value);
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbxbbNwu4AEBU6cpjDyIcjflmRFmciedv0D_IAcIkoXLzYWpp4CANuBTSmiWpxd1XEylEQ/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbzHLcAtWIzgAKokuyvhUTwFlrWm9Sw5dxVoEnH7YzluYrZG3niHLBAwH0_fTHv-N__1/exec", {
       method: "POST",
       mode: "no-cors",
       body: formData,
